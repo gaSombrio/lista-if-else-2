@@ -12,11 +12,27 @@
     */
 
     //ENTRADA
-
-
+    const salario = Number(prompt(`qual seu salário?`).replace(".",","));
+    const auxilio = prompt(`você deseja receber auxílio transporte?`);
+    const veiculo = prompt(`você ultiliza veículo próprio para se locomover?`);
+    let salarioF = 0;
+    let desconto = 0;
     //PROCESSAMENTO
+    if (auxilio == "sim" || veiculo == "sim") {
+        salarioF = salario - salario * 0.06;
+        desconto = salario * 0.06;
+    } else {
+        salarioF = salario;
+    }
 
-    
+    if (veiculo == "sim" && auxilio == "sim") {
+        salarioF + 200;
+    } else if (veiculo == "não" && auxilio == "sim") {
+        salarioF + 150;
+    }
     //SAÍDA
+
+    document.write(`desconto = R$${desconto} <br>
+    salario final = R$${salarioF}`);
 
 </script>
