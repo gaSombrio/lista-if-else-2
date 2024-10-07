@@ -24,10 +24,18 @@
     const projetosP = Number(prompt(`quantos projetos de pesquisa você ja cordenou?`));
     const projetosE = Number(prompt(`quantos projetos de extensão vocẽ já orientou?`));
     const TCCs = Number(prompt(`quantos TCCs você já orientou?`));
-    let pontuação
+    let  pontos = anosC * 2.5 + projetosP * 5 + projetosE * 5 + TCCs * 3;
     //PROCESSAMENTO
-
+    let classe = 0;
+    if (pontos <= 30) {
+        classe = "CONVIDADO";
+    } else if (pontos <= 50) {
+        classe = "AGREGADO";
+    } else if (pontos > 50) {
+        classe = "TITULAR";
+    }
     
     //SAÍDA
 
+    document.write(`sua classe é: ${classe}`)
 </script>

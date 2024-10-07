@@ -12,11 +12,19 @@
     */
 
     //ENTRADA
-
-
+    const valor = Number(prompt(`qual o valor do computador?`).replace(".",","));
+    const pagamento = prompt(`qual será a forma de pagamento? (B-boleto, D-dinheiro ou P-pix)`);
+    let valorF = 0;
     //PROCESSAMENTO
-
+    if (pagamento == "B") {
+        valorF = valor - valor * 0.03;
+    } else if (pagamento == "D") {
+        valorF = valor - valor * 0.05;
+    } else if ( pagamento == "P") {
+        valorF = valor - valor * 0.1;
+    }
     
     //SAÍDA
 
+    document.write(`o valor a ser pago com o desconto é de R$${valorF}`)
 </script>

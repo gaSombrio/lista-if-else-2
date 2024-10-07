@@ -12,9 +12,21 @@
     */
 
     //ENTRADA
-
-
+    const destinoUm = Number(prompt(`informe o valor para viajar até São Paulo`).replace(".",","));
+    const destinoDois = Number(prompt(`informe o valor para viajar até o Rio de Janeiro`).replace(".",","));
+    const precoUm = Number(prompt(`qual a diária do hotel em São Paulo?`).replace(".",","));
+    const precoDois = Number(prompt(`qual o valor da diária do hotel no Rio de Janeiro?`).replace(".",","));
+    const tempo = Number(prompt(`quantos dias pretende ficar de viagem?`));
+    let viagemSP = destinoUm + precoUm * tempo;
+    let viagemRJ = destinoDois + precoDois * tempo;
     //PROCESSAMENTO
+
+    if (viagemSP > viagemRJ) {
+        document.write(`a viagem mais em conta é para Rio de Janeiro com um custo de R$${viagemRJ}`)
+    } else if (viagemRJ > viagemSP) {
+        document.write(`a viagem mais em conta é para São Paulo com um custo de R$${viagemSP}`)
+    }
+
 
     
     //SAÍDA
