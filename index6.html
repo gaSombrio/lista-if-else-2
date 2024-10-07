@@ -16,10 +16,27 @@
 
     //ENTRADA
 
+    const viagens = Number(prompt(`Informe quantas viagens foram realizadas por dia`));
+    const cargo = Number(prompt(`Informe o cargo que ocupa (Motorista ou Cobrador)`));
 
     //PROCESSAMENTO
+    let diaria = 100;
+    let valorF = 0;
+    if (cargo = "Motorista" && viagens <= 10) {
+        valorF = diaria + diaria * 0.2;
+    } else if (cargo = "Motorista" && viagens > 10) {
+        valorF = diaria + diaria * 0.35;
+    } else if (cargo = "Cobrador" && viagens <= 10) {
+        valorF = diaria
+    } else if (cargo = "Cobrador" && viagens > 10) {
+        valorF = diaria + diaria * 0.1;
+    } else {
+        alert(`Informe um cargo válido`);
+    }
 
     
     //SAÍDA
+
+    document.write(`Seu cargo é: ${cargo}, e o valor recebido pelas viagens será de: ${valorF}`);
 
 </script>
